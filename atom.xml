@@ -3,11 +3,11 @@
   <title>Hexo</title>
   
   
-  <link href="http://example.com/atom.xml" rel="self"/>
+  <link href="https://1572817043.github.io/tretre1.github.io/atom.xml" rel="self"/>
   
-  <link href="http://example.com/"/>
+  <link href="https://1572817043.github.io/tretre1.github.io/"/>
   <updated>2023-07-21T16:27:34.279Z</updated>
-  <id>http://example.com/</id>
+  <id>https://1572817043.github.io/tretre1.github.io/</id>
   
   <author>
     <name>John Doe</name>
@@ -18,8 +18,8 @@
   
   <entry>
     <title>Hello World</title>
-    <link href="http://example.com/2023/07/22/hello-world/"/>
-    <id>http://example.com/2023/07/22/hello-world/</id>
+    <link href="https://1572817043.github.io/tretre1.github.io/2023/07/22/hello-world/"/>
+    <id>https://1572817043.github.io/tretre1.github.io/2023/07/22/hello-world/</id>
     <published>2023-07-21T16:27:34.279Z</published>
     <updated>2023-07-21T16:27:34.279Z</updated>
     

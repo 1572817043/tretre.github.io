@@ -4,6 +4,141 @@
   
     
     <entry>
+      <title>个人自用的一些油猴脚本</title>
+      <link href="/tretre1.github.io/2023/07/31/jb/"/>
+      <url>/tretre1.github.io/2023/07/31/jb/</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\tretre1.github.io\assets\css\APlayer.min.css"><script src="\tretre1.github.io\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h2 id="无缝翻页"><a href="#无缝翻页" class="headerlink" title="无缝翻页"></a><a href="https://greasyfork.org/zh-CN/scripts/419215">无缝翻页</a></h2><p>当浏览网页 向下滚动 时，脚本会自动将 下一页内容 无缝衔接到底部（类似瀑布流），纵享丝滑的网页浏览体验~</p><h2 id="在豆瓣网站一键在线观看"><a href="#在豆瓣网站一键在线观看" class="headerlink" title="在豆瓣网站一键在线观看"></a><a href="https://greasyfork.org/zh-CN/scripts/459540">在豆瓣网站一键在线观看</a></h2><p>基于豆瓣的影视类脚本，安装后打开豆瓣，搜索自己想看的电影，点击一键播放，即可观看，会根据延迟自动排序，默认播放速度最快的</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 工具 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 工具 </tag>
+            
+            <tag> 脚本 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>解决hexo+butterfly引入css+js文件无效</title>
+      <link href="/tretre1.github.io/2023/07/31/mlgb/"/>
+      <url>/tretre1.github.io/2023/07/31/mlgb/</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\tretre1.github.io\assets\css\APlayer.min.css"><script src="\tretre1.github.io\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h2 id="问题起源"><a href="#问题起源" class="headerlink" title="问题起源"></a>问题起源</h2><p>今天准备魔改一下butterfly主题的背景，结果根据别人教程一步步做完引入之后，打开网页没有任何，想都没想F12检查了一下，好家伙，css和js文件夹愣是不见引入的文件，错误日志打开该路径，结果如下：</p><figure class="highlight txt"><table><tr><td class="code"><pre><span class="line">Cannot GET /js/universe.css</span><br></pre></td></tr></table></figure><p>于是乎跑去检查路径，这里我的路径如下：</p><figure class="highlight html"><table><tr><td class="code"><pre><span class="line">inject:</span><br><span class="line">head:</span><br><span class="line">## 星空背景</span><br><span class="line">- <span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">&quot;stylesheet&quot;</span> <span class="attr">href</span>=<span class="string">&quot;/css/universe.css&quot;</span>&gt;</span></span><br></pre></td></tr></table></figure><p>卧槽，没问题啊，这个时候打算检查一下是不是优先级和层叠出问题了，但想了想好像网页都说是找不到文件，那显然应该是<strong>inject</strong>那一步有问题<br>东查西查了一下，修改了一下：</p><figure class="highlight html"><table><tr><td class="code"><pre><span class="line">- <span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">&quot;stylesheet&quot;</span> <span class="attr">href</span>=<span class="string">&quot;/css/universe.css&quot;</span>&gt;</span></span><br><span class="line">              👇//改成以下，js文件同</span><br><span class="line">- <span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">&quot;stylesheet&quot;</span> <span class="attr">href</span>=<span class="string">&quot;css/universe.css&quot;</span>&gt;</span></span><br></pre></td></tr></table></figure><p>然后解决。。。气死了</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 教程 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 教程 </tag>
+            
+            <tag> 代码 </tag>
+            
+            <tag> hexo </tag>
+            
+            <tag> butterfly </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>今天浏览推特所找到的一些相当有意思的工具</title>
+      <link href="/tretre1.github.io/2023/07/30/jilu/"/>
+      <url>/tretre1.github.io/2023/07/30/jilu/</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\tretre1.github.io\assets\css\APlayer.min.css"><script src="\tretre1.github.io\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h2 id="非常方便的梗图生成工具"><a href="#非常方便的梗图生成工具" class="headerlink" title="非常方便的梗图生成工具"></a>非常方便的梗图生成工具</h2><p><strong>网址: <a href="https://x.magiconch.com/">https://x.magiconch.com</a></strong><br><img src="/tretre1.github.io/img/gt1.jpg"></p><h2 id="只需要-10-秒就能定制-AI-插图故事书"><a href="#只需要-10-秒就能定制-AI-插图故事书" class="headerlink" title="只需要 10 秒就能定制 AI 插图故事书"></a>只需要 10 秒就能定制 AI 插图故事书</h2><p><strong>这些书籍可以在平台上进行销售，也有人在抖音上做绘本故事账号，吸引宝妈粉，无需绘画功底，更用不着写作技巧，全部由 AI 搞定</strong></p><p>操作步骤也非常简单：</p><ul><li>使用 ChatGPT 输入 20-200 个单词，生成儿童故事</li><li>把故事文本和图片导入剪映，自动配音后生成视频，后期可以挂上抖音橱窗的儿童绘本、玩具等产品，从而赚取佣金<br><strong>工具链接 👉<a href="http://storybird.ai/">http://storybird.ai</a></strong><br><img src="/tretre1.github.io/img/story1.png"></li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> 工具 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 工具 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>AI帮你写代码</title>
+      <link href="/tretre1.github.io/2023/07/30/AI-codetools/"/>
+      <url>/tretre1.github.io/2023/07/30/AI-codetools/</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\tretre1.github.io\assets\css\APlayer.min.css"><script src="\tretre1.github.io\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="AI-写代码的15个工具网站"><a href="#AI-写代码的15个工具网站" class="headerlink" title="AI 写代码的15个工具网站"></a>AI 写代码的15个工具网站</h1><p><strong>请配合翻墙工具使用</strong></p><ul><li><a href="https://jit.codes/">https://jit.codes/</a> - 文本转为HTML、CSS、JavaScript代码</li><li><a href="https://codemate.ai/">https://Codemate.ai</a> - 为编码者提供的语法检查工具</li><li><a href="https://useblackbox.io/">https://UseBlackBox.io</a> - 将简单英文转为代码</li><li><a href="https://gitfluence.com/">https://GitFluence.com</a> » 寻找正确的Git命令</li><li><a href="https://safurai.com/">https://Safurai.com</a> +» 以10倍速度编写代码</li><li><a href="https://codeium.com/">https://Codeium.com</a> +» 现代编码超能力</li><li><a href="https://spellbox.app/">https://Spellbox.app</a> + 提示编码</li><li><a href="https://autoregex.xyz/">https://Autoregex.xyz</a> « 英文转为正则表达式</li><li><a href="https://codesquire.ai/">https://Codesquire.ai</a> - 将你的思维转化为代码</li><li><a href="https://tabnine.com/">https://Tabnine.com</a> + 使用代码补全更快地编码</li><li><a href="https://codepeer.ai/">https://Codepeer.ai</a> - 使用代码生成网站</li><li><a href="https://stunning.so/">https://Stunning.so</a> - ChatGPT风格的网站构建器</li><li><a href="https://figstack.com/">https://Figstack.com</a> + 理解任何语言的代码</li><li><a href="https://mutable.ai/">https://Mutable.ai</a> » 生成高质量的代码</li><li><a href="https://chat2code.dev/">https://Chat2code.dev</a> + 将你的话语转化为代码</li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> 工具 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 工具 </tag>
+            
+            <tag> 代码 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>论文查重</title>
+      <link href="/tretre1.github.io/2023/07/30/%E8%AE%BA%E6%96%87/"/>
+      <url>/tretre1.github.io/2023/07/30/%E8%AE%BA%E6%96%87/</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\tretre1.github.io\assets\css\APlayer.min.css"><script src="\tretre1.github.io\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h2 id="免费论文查重网站"><a href="#免费论文查重网站" class="headerlink" title="免费论文查重网站"></a>免费论文查重网站</h2><ul><li><p><strong>万方数据 (<a href="https://chsi.wanfangtech.net/">https://chsi.wanfangtech.net/</a>)</strong><br>应届生免费一次，登陆学信网授权</p></li><li><p><strong>论文狗 (<a href="https://www.lunwengo.net/">https://www.lunwengo.net/</a>)</strong><br>每天专业版免费查重一篇，限时全版本查重免费</p></li><li><p><strong>PaperYY (<a href="https://www.paperyy.com/">https://www.paperyy.com/</a>)</strong><br>每天 11:11~11:22 全版本查重限时免费，每天限2次，累计限5次</p></li><li><p><strong>FreeCheck (<a href="https://www.freecheck.cn/">https://www.freecheck.cn/</a>)</strong><br>每天免费检测一次，需登陆</p></li><li><p><strong>PaperDay (<a href="https://www.paperday.cn/">https://www.paperday.cn/</a>)</strong><br>标准版永久免费，旗舰版每日限免</p></li><li><p><strong>WritePass (<a href="http://www.writepass.cn/">http://www.writepass.cn/</a>)</strong><br>免费查重，每个微信账户可领取一次</p></li><li><p><strong>PaperTime (<a href="https://xueshu.baidu.com/usercenter/papercheck">https://xueshu.baidu.com/usercenter/papercheck</a>)</strong><br>百度学术提供首单免费</p></li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> 信息差 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 信息差 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>5sing下载音乐</title>
       <link href="/tretre1.github.io/2023/07/28/5singdownload/"/>
       <url>/tretre1.github.io/2023/07/28/5singdownload/</url>

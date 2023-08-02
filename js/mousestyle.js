@@ -1,4 +1,4 @@
-var CURSOR;
+<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\tretre1.github.io\assets\css\APlayer.min.css"><script src="\tretre1.github.io\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script>var CURSOR;
 
 Math.lerp = (a, b, n) => (1 - n) * a + n * b;
 

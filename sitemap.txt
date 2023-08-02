@@ -21,8 +21,8 @@ http://localhost:4000/categories/index.html
 http://localhost:4000/2023/07/22/hello-world/
 http://localhost:4000/
 http://localhost:4000/tags/%E6%95%99%E7%A8%8B/
-http://localhost:4000/tags/%E5%B7%A5%E5%85%B7/
 http://localhost:4000/tags/%E4%BB%A3%E7%A0%81/
+http://localhost:4000/tags/%E5%B7%A5%E5%85%B7/
 http://localhost:4000/tags/%E8%84%9A%E6%9C%AC/
 http://localhost:4000/tags/hexo/
 http://localhost:4000/tags/butterfly/

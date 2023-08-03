@@ -17,37 +17,6 @@
     
     
     <entry>
-      <title>关于魔改butterfly主题引入css及js文件路径的一些小细节</title>
-      <link href="/tretre1.github.io/2023/07/31/mlgb/"/>
-      <url>/tretre1.github.io/2023/07/31/mlgb/</url>
-      
-        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\tretre1.github.io\assets\css\APlayer.min.css"><script src="\tretre1.github.io\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h1><p>butterfly主题的配置文件当中，inject的head与bottom用来引入css与js文件，假如在引入了之后，文件不起作用，尝试F12，点击source，css和js文件夹大概率是没有你引入的文件<br>点击网页下面的错误标志路径，估计会和下面一样<br><img src="/tretre1.github.io/./img/mlge1.png"></p><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">Cannot GET /css/xxx.css</span><br><span class="line">//或者</span><br><span class="line">Cannot GET /js/xxx.css</span><br></pre></td></tr></table></figure><h1 id="解决方法"><a href="#解决方法" class="headerlink" title="解决方法"></a>解决方法</h1><h2 id="1-修改url配置"><a href="#1-修改url配置" class="headerlink" title="1.修改url配置"></a>1.修改url配置</h2><h3 id="本地部署的时候"><a href="#本地部署的时候" class="headerlink" title="本地部署的时候"></a>本地部署的时候</h3><p>在博客文件夹中有一个yml文件: _config.yml用来设置博客页面的标题，副标题等文件<br>当你在本地部署来检查博客魔改之后的样子，就要配置本地的网址<br><img src="/tretre1.github.io/./img/mlgb2.png"></p><figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="comment"># URL</span></span><br><span class="line"><span class="comment">## Set your site url here. For example, if you use GitHub Page, set url as &#x27;https://username.github.io/project&#x27;</span></span><br><span class="line"><span class="attr">url:</span> <span class="string">http://localhost:4000</span>    <span class="string">//👈修改这里</span></span><br></pre></td></tr></table></figure><h3 id="线上部署的时候"><a href="#线上部署的时候" class="headerlink" title="线上部署的时候"></a>线上部署的时候</h3><p>同理修改url配置，假设你是在github进行了部署，这里的链接就要用线上部署的链接：<br><img src="/tretre1.github.io/./img/mlgb3.png"></p><figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="comment"># URL</span></span><br><span class="line"><span class="comment">## Set your site url here. For example, if you use GitHub Page, set url as &#x27;https://username.github.io/project&#x27;</span></span><br><span class="line"><span class="attr">url:</span>  <span class="string">https://1572817043.github.io/tretre1.github.io</span>    <span class="string">//👈修改这里</span></span><br></pre></td></tr></table></figure><h2 id="2-修改inject的文件路径"><a href="#2-修改inject的文件路径" class="headerlink" title="2.修改inject的文件路径"></a>2.修改inject的文件路径</h2><p>在_config.butter.yml中找到inject，head以及bottom的路径要改成绝对路径<br><img src="/tretre1.github.io/./img/mlgb4.png"></p><figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="bullet">-</span> <span class="string">&lt;link</span> <span class="string">rel=&quot;stylesheet&quot;</span> <span class="string">href=&quot;css/universe.css&quot;&gt;</span>    <span class="string">//此行为相对路径</span></span><br><span class="line">             <span class="string">👇改为</span></span><br><span class="line"><span class="bullet">-</span> <span class="string">&lt;link</span> <span class="string">rel=&quot;stylesheet&quot;</span> <span class="string">href=&quot;/css/universe.css&quot;&gt;</span>    <span class="string">//此行为绝对路径</span></span><br></pre></td></tr></table></figure><p>这两步做完，应该就能解决路径错误的问题了</p><h1 id="后记"><a href="#后记" class="headerlink" title="后记"></a>后记</h1><p>刚魔改主题文件那会，官方教程文档对url配置我没有看清楚，所以导致后面被这个问题折腾了一下子，当时我直接放的github线上部署的链接，于是我每次本地部署的时候，文件引入就成了大问题，后来我就使用相对路径，以为解决了问题，相对路径即在首页的时候，假设 <a href="http://localhost:4000/">http://localhost:4000</a> 这里相对路径会以 <a href="http://localhost:4000/css/xxx.css">http://localhost:4000/css/xxx.css</a> 这样去调用文件，但是一旦进了标签页或者分类页面，就会变成 <a href="http://localhost:4000/tags/css/xxx.css">http://localhost:4000/tags/css/xxx.css</a> ,这样路径就错了，于是就出现了在首页正常调用css与js文件，一到别的页面，一刷新就会出现路径错误调用不到的问题，这时回到首页再次刷新又正常了，但是如果是绝对路径就会以config.yml中url配置的固定网址去调用文件，这样即使在别的页面刷新也能正常调用，所以当本地部署的时候，要改成本地的网址，线上部署的时候就要改回线上部署的链接。</p>]]></content>
-      
-      
-      <categories>
-          
-          <category> 教程 </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> 代码 </tag>
-            
-            <tag> 教程 </tag>
-            
-            <tag> hexo </tag>
-            
-            <tag> butterfly </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>个人自用的一些油猴脚本</title>
       <link href="/tretre1.github.io/2023/07/31/jb/"/>
       <url>/tretre1.github.io/2023/07/31/jb/</url>
@@ -67,6 +36,37 @@
             <tag> 工具 </tag>
             
             <tag> 脚本 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>关于魔改butterfly主题引入css及js文件路径的一些小细节</title>
+      <link href="/tretre1.github.io/2023/07/31/mlgb/"/>
+      <url>/tretre1.github.io/2023/07/31/mlgb/</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\tretre1.github.io\assets\css\APlayer.min.css"><script src="\tretre1.github.io\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h1><p>butterfly主题的配置文件当中，inject的head与bottom用来引入css与js文件，假如在引入了之后，文件不起作用，尝试F12，点击source，css和js文件夹大概率是没有你引入的文件<br>点击网页下面的错误标志路径，估计会和下面一样<br><img src="/tretre1.github.io/./img/mlge1.png"></p><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">Cannot GET /css/xxx.css</span><br><span class="line">//或者</span><br><span class="line">Cannot GET /js/xxx.css</span><br></pre></td></tr></table></figure><h1 id="解决方法"><a href="#解决方法" class="headerlink" title="解决方法"></a>解决方法</h1><h2 id="1-修改url配置"><a href="#1-修改url配置" class="headerlink" title="1.修改url配置"></a>1.修改url配置</h2><h3 id="本地部署的时候"><a href="#本地部署的时候" class="headerlink" title="本地部署的时候"></a>本地部署的时候</h3><p>在博客文件夹中有一个yml文件: _config.yml用来设置博客页面的标题，副标题等文件<br>当你在本地部署来检查博客魔改之后的样子，就要配置本地的网址<br><img src="/tretre1.github.io/./img/mlgb2.png"></p><figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="comment"># URL</span></span><br><span class="line"><span class="comment">## Set your site url here. For example, if you use GitHub Page, set url as &#x27;https://username.github.io/project&#x27;</span></span><br><span class="line"><span class="attr">url:</span> <span class="string">http://localhost:4000</span>    <span class="string">//👈修改这里</span></span><br></pre></td></tr></table></figure><h3 id="线上部署的时候"><a href="#线上部署的时候" class="headerlink" title="线上部署的时候"></a>线上部署的时候</h3><p>同理修改url配置，假设你是在github进行了部署，这里的链接就要用线上部署的链接：<br><img src="/tretre1.github.io/./img/mlgb3.png"></p><figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="comment"># URL</span></span><br><span class="line"><span class="comment">## Set your site url here. For example, if you use GitHub Page, set url as &#x27;https://username.github.io/project&#x27;</span></span><br><span class="line"><span class="attr">url:</span>  <span class="string">https://1572817043.github.io/tretre1.github.io</span>    <span class="string">//👈修改这里</span></span><br></pre></td></tr></table></figure><h2 id="2-修改inject的文件路径"><a href="#2-修改inject的文件路径" class="headerlink" title="2.修改inject的文件路径"></a>2.修改inject的文件路径</h2><p>在_config.butter.yml中找到inject，head以及bottom的路径要改成绝对路径<br><img src="/tretre1.github.io/./img/mlgb4.png"></p><figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="bullet">-</span> <span class="string">&lt;link</span> <span class="string">rel=&quot;stylesheet&quot;</span> <span class="string">href=&quot;css/universe.css&quot;&gt;</span>    <span class="string">//此行为相对路径</span></span><br><span class="line">             <span class="string">👇改为</span></span><br><span class="line"><span class="bullet">-</span> <span class="string">&lt;link</span> <span class="string">rel=&quot;stylesheet&quot;</span> <span class="string">href=&quot;/css/universe.css&quot;&gt;</span>    <span class="string">//此行为绝对路径</span></span><br></pre></td></tr></table></figure><p>这两步做完，应该就能解决路径错误的问题了</p><h1 id="后记"><a href="#后记" class="headerlink" title="后记"></a>后记</h1><p>刚魔改主题文件那会，官方教程文档对url配置我没有看清楚，所以导致后面被这个问题折腾了一下子，当时我直接放的github线上部署的链接，于是我每次本地部署的时候，文件引入就成了大问题，后来我就使用相对路径，以为解决了问题，相对路径即在首页的时候，假设 <a href="http://localhost:4000/">http://localhost:4000</a> 这里相对路径会以 <a href="http://localhost:4000/css/xxx.css">http://localhost:4000/css/xxx.css</a> 这样去调用文件，但是一旦进了标签页或者分类页面，就会变成 <a href="http://localhost:4000/tags/css/xxx.css">http://localhost:4000/tags/css/xxx.css</a> ,这样路径就错了，于是就出现了在首页正常调用css与js文件，一到别的页面，一刷新就会出现路径错误调用不到的问题，这时回到首页再次刷新又正常了，但是如果是绝对路径就会以config.yml中url配置的固定网址去调用文件，这样即使在别的页面刷新也能正常调用，所以当本地部署的时候，要改成本地的网址，线上部署的时候就要改回线上部署的链接。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 教程 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 教程 </tag>
+            
+            <tag> 代码 </tag>
+            
+            <tag> hexo </tag>
+            
+            <tag> butterfly </tag>
             
         </tags>
       
@@ -193,9 +193,9 @@
       
         <tags>
             
-            <tag> 代码 </tag>
-            
             <tag> 教程 </tag>
+            
+            <tag> 代码 </tag>
             
         </tags>
       
@@ -220,9 +220,9 @@
       
         <tags>
             
-            <tag> 代码 </tag>
-            
             <tag> 教程 </tag>
+            
+            <tag> 代码 </tag>
             
         </tags>
       

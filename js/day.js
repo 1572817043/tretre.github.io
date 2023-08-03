@@ -1,4 +1,4 @@
-<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script>var d = new Date();
+<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\tretre1.github.io\assets\css\APlayer.min.css"><script src="\tretre1.github.io\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script>var d = new Date();
 m = d.getMonth() + 1;
 dd = d.getDate();
 y = d.getFullYear();

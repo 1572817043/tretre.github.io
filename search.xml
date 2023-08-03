@@ -17,6 +17,33 @@
     
     
     <entry>
+      <title>个人自用的一些油猴脚本</title>
+      <link href="/tretre1.github.io/2023/07/31/jb/"/>
+      <url>/tretre1.github.io/2023/07/31/jb/</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\tretre1.github.io\assets\css\APlayer.min.css"><script src="\tretre1.github.io\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h2 id="无缝翻页"><a href="#无缝翻页" class="headerlink" title="无缝翻页"></a><a href="https://greasyfork.org/zh-CN/scripts/419215">无缝翻页</a></h2><p>当浏览网页 向下滚动 时，脚本会自动将 下一页内容 无缝衔接到底部（类似瀑布流），纵享丝滑的网页浏览体验~</p><h2 id="在豆瓣网站一键在线观看"><a href="#在豆瓣网站一键在线观看" class="headerlink" title="在豆瓣网站一键在线观看"></a><a href="https://greasyfork.org/zh-CN/scripts/459540">在豆瓣网站一键在线观看</a></h2><p>基于豆瓣的影视类脚本，安装后打开豆瓣，搜索自己想看的电影，点击一键播放，即可观看，会根据延迟自动排序，默认播放速度最快的</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 工具 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 工具 </tag>
+            
+            <tag> 脚本 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>关于魔改butterfly主题引入css及js文件路径的一些小细节</title>
       <link href="/tretre1.github.io/2023/07/31/mlgb/"/>
       <url>/tretre1.github.io/2023/07/31/mlgb/</url>
@@ -40,33 +67,6 @@
             <tag> hexo </tag>
             
             <tag> butterfly </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>个人自用的一些油猴脚本</title>
-      <link href="/tretre1.github.io/2023/07/31/jb/"/>
-      <url>/tretre1.github.io/2023/07/31/jb/</url>
-      
-        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\tretre1.github.io\assets\css\APlayer.min.css"><script src="\tretre1.github.io\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h2 id="无缝翻页"><a href="#无缝翻页" class="headerlink" title="无缝翻页"></a><a href="https://greasyfork.org/zh-CN/scripts/419215">无缝翻页</a></h2><p>当浏览网页 向下滚动 时，脚本会自动将 下一页内容 无缝衔接到底部（类似瀑布流），纵享丝滑的网页浏览体验~</p><h2 id="在豆瓣网站一键在线观看"><a href="#在豆瓣网站一键在线观看" class="headerlink" title="在豆瓣网站一键在线观看"></a><a href="https://greasyfork.org/zh-CN/scripts/459540">在豆瓣网站一键在线观看</a></h2><p>基于豆瓣的影视类脚本，安装后打开豆瓣，搜索自己想看的电影，点击一键播放，即可观看，会根据延迟自动排序，默认播放速度最快的</p>]]></content>
-      
-      
-      <categories>
-          
-          <category> 工具 </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> 工具 </tag>
-            
-            <tag> 脚本 </tag>
             
         </tags>
       
@@ -116,9 +116,9 @@
       
         <tags>
             
-            <tag> 代码 </tag>
-            
             <tag> 工具 </tag>
+            
+            <tag> 代码 </tag>
             
         </tags>
       

@@ -1,4 +1,4 @@
-<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\tretre1.github.io\assets\css\APlayer.min.css"><script src="\tretre1.github.io\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script>WIDGET = {
+WIDGET = {
     "CONFIG": {
         "modules": "01234",
         "background": "5",
